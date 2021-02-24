@@ -51,19 +51,19 @@ class FamilyStructure:
 
     def delete_member(self, id):
         # fill this method and update the return
-        for position in range(len(self._members)):
-            if self._members[position]["id"] == id:
-                self._members.pop(position)
-                # print(self._members[position]["id"])
-            # else:
-            #     raise Exception("Member not found")
-        return id
-        # status = False
-        # for i, item in enumerate(self._members, start=0):
-        #     if item["id"] == id:
-        #         self._members.pop(i)
-        #         status = True
-        # return status        
+        # for position in range(len(self._members)):
+        #     if self._members[position]["id"] == id:
+        #         self._members.pop(position)
+        #         # print(self._members[position]["id"])
+        #     # else:
+        #     #     raise Exception("Member not found")
+        # return id
+        status = False
+        for i, item in enumerate(self._members, start=0):
+            if item["id"] == id:
+                self._members.pop(i)
+                status = True
+        return status
 
     def get_member(self, id):
         # fill this method and update the return
